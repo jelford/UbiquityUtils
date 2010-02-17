@@ -2,15 +2,9 @@ CmdUtils.CreateCommand({
   names: ["twinfo", "twitfo", "tell me about"],
   author: {name: "James", email : "je208@doc.ic.ac.uk"},
   license: "MPL",
-  description: "Finds information on a Twitter user",
-  help: "Takes the user's screen name as an argument, and displays a summary of their information in the preview
-            box, which is pasted into a document when the command is executed. Can be embedded in emails, documents
-            etc, and all usernames / hashtags / urls are properly passed/linked.",
+  
 
-  comments: "This code was more about me learning javascript than anything else. It's not really commented at all (for which I apologise deeply), and there are probably some grevious errors. A known bug is that when the username for lookup is incomplete, it still attempts to pass the XML data from twitter, even though it's invalid / empty. There's a check in there, but that doesn't seem to do anything. This isn't a fatal bug, as most of the time it's just caught and logged by the error console, but it does slow things down a bit when you've got firebug running. Also, beware that it potentially sends a request with every character typed (not sure how to avoid that and maintain the preview), so if you overuse it you could go over your 150 request/hr limit, but I only did that once in the whole development process.",
-
-
-  //Pass it a twitter ID
+    //Pass it a twitter ID
   arguments : [{role: "user", nountype: noun_type_twitter_user, label: "@usertofollow"}],
   
 
@@ -91,3 +85,4 @@ CmdUtils.CreateCommand({
 
 
 })
+
